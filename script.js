@@ -23,3 +23,9 @@ const addBy3 = curriedAddition(3); // Function that always adds 3 to the number 
 const compose = (f, g) => (a) => f(g(a));
 const sum = (num) => num + 1;
 compose(sum, sum)(5); // Runs the Sum function in spot G with 5 making 6. Then runs the Sum function in spot F with 6 making and returning 7.
+
+// Key points to make Avoiding side effects, functional purity.
+let a = 1;
+const b = () =>{
+   a = 2; // Side effect as included in the function
+} // For functional purity, avoid side effects and always return something.
